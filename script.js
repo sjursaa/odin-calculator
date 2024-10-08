@@ -28,10 +28,11 @@ function operate(number1, operator, number2) {
 }
 
 let displayValue = "42069";
+
+// TODO: Remove this stuff
 let number1 = 2;
 let number2 = 2;
 let operator = "+";
-
 // testing all operators
 let test = operate(number1, operator, number2);
 console.log(test);
