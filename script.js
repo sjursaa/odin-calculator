@@ -58,11 +58,61 @@ function updateDisplay() {
 }
 updateDisplay();
 
+// Eventhandlers for number buttons
 const button1 = document.querySelector("#number1");
 button1.onclick = () => {
   displayValue += 1;
   updateDisplay();
 };
+const button2 = document.querySelector("#number2");
+button2.onclick = () => {
+  displayValue += 2;
+  updateDisplay();
+};
+const button3 = document.querySelector("#number3");
+button3.onclick = () => {
+  displayValue += 3;
+  updateDisplay();
+};
+const button4 = document.querySelector("#number4");
+button4.onclick = () => {
+  displayValue += 4;
+  updateDisplay();
+};
+const button5 = document.querySelector("#number5");
+button5.onclick = () => {
+  displayValue += 5;
+  updateDisplay();
+};
+const button6 = document.querySelector("#number6");
+button6.onclick = () => {
+  displayValue += 6;
+  updateDisplay();
+};
+const button7 = document.querySelector("#number7");
+button7.onclick = () => {
+  displayValue += 7;
+  updateDisplay();
+};
+const button8 = document.querySelector("#number8");
+button8.onclick = () => {
+  displayValue += 8;
+  updateDisplay();
+};
+const button9 = document.querySelector("#number9");
+button9.onclick = () => {
+  displayValue += 9;
+  updateDisplay();
+};
+const button0 = document.querySelector("#number0");
+button0.onclick = () => {
+  displayValue += 0;
+  updateDisplay();
+};
+
+// equals button
+
+// clear button
 const clearButton = document.querySelector("#clear");
 clearButton.onclick = () => {
   displayValue = "";
