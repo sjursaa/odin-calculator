@@ -44,8 +44,6 @@ operator = "/";
 test = operate(number1, operator, number2);
 console.log(test);
 
-// TODO: add eventhandlers for when buttons are pressed
-
 // setting display-div to the value contained in the script
 function updateDisplay() {
   const display = document.querySelector(".display");
@@ -110,7 +108,36 @@ button0.onclick = () => {
   updateDisplay();
 };
 
+// Operator buttons
+const plusButton = document.querySelector("#operatorPlus");
+plusButton.onclick = () => {
+  displayValue += "+";
+  updateDisplay();
+};
+const minusButton = document.querySelector("#operatorMinus");
+minusButton.onclick = () => {
+  displayValue += "-";
+  updateDisplay();
+};
+const multiplyButton = document.querySelector("#operatorMultiply");
+multiplyButton.onclick = () => {
+  displayValue += "*";
+  updateDisplay();
+};
+const divideButton = document.querySelector("#operatorDivide");
+divideButton.onclick = () => {
+  displayValue += "/";
+  updateDisplay();
+};
+
 // equals button
+const equalButton = document.querySelector("#equals");
+equalButton.onclick = () => {
+  // TODO: replace prevVal name with something better
+  let prevVal = displayValue;
+  displayValue = operate(prevVal);
+  updateDisplay();
+};
 
 // clear button
 const clearButton = document.querySelector("#clear");
