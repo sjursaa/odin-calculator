@@ -47,9 +47,14 @@ console.log(test);
 // TODO: add eventhandlers for when buttons are pressed
 
 // setting display-div to the value contained in the script
-const display = document.querySelector(".display");
-display.textContent = displayValue;
+function updateDisplay() {
+  const display = document.querySelector(".display");
+  display.textContent = displayValue;
+}
+updateDisplay();
 
-//
 const button1 = document.querySelector("#number1");
-button1.onclick = () => alert("Ello");
+button1.onclick = () => {
+  displayValue = 1;
+  updateDisplay();
+};
