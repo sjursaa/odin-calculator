@@ -26,6 +26,7 @@ function operate(number1, operator, number2) {
   }
 }
 
+let displayValue = 420;
 let number1 = 2;
 let number2 = 2;
 let operator = "+";
@@ -42,3 +43,5 @@ console.log(test);
 operator = "/";
 test = operate(number1, operator, number2);
 console.log(test);
+
+// TODO: add eventhandlers for when buttons are pressed

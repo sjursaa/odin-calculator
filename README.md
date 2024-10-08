@@ -4,7 +4,7 @@
 
 basic calculator written in html, css & javascript.
 
-# basic requirements
+# Basic requirements
 
 basic operators: add, subtract, divide, multiply
 
