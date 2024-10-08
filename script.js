@@ -26,9 +26,19 @@ function operate(number1, operator, number2) {
   }
 }
 
-let number1 = 1;
-let number2 = 1;
+let number1 = 2;
+let number2 = 2;
 let operator = "+";
 
+// testing all operators
 let test = operate(number1, operator, number2);
+console.log(test);
+operator = "-";
+test = operate(number1, operator, number2);
+console.log(test);
+operator = "*";
+test = operate(number1, operator, number2);
+console.log(test);
+operator = "/";
+test = operate(number1, operator, number2);
 console.log(test);
