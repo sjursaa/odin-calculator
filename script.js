@@ -26,7 +26,7 @@ function operate(number1, operator, number2) {
   }
 }
 
-let displayValue = 420;
+let displayValue = 42069;
 let number1 = 2;
 let number2 = 2;
 let operator = "+";
@@ -45,3 +45,11 @@ test = operate(number1, operator, number2);
 console.log(test);
 
 // TODO: add eventhandlers for when buttons are pressed
+
+// setting display-div to the value contained in the script
+const display = document.querySelector(".display");
+display.textContent = displayValue;
+
+//
+const button1 = document.querySelector("#number1");
+button1.onclick = () => alert("Ello");
