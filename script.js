@@ -11,6 +11,7 @@ function divide(number1, number2) {
   return number1 / number2;
 }
 
+// TODO: refactor to take a string, split on operator, compute and return as string
 function operate(number1, operator, number2) {
   if (operator == "+") {
     return add(number1, number2);
@@ -133,9 +134,8 @@ divideButton.onclick = () => {
 // equals button
 const equalButton = document.querySelector("#equals");
 equalButton.onclick = () => {
-  // TODO: replace prevVal name with something better
-  let prevVal = displayValue;
-  displayValue = operate(prevVal);
+  let stringToBeCalculated = displayValue;
+  displayValue = operate(stringToBeCalculated);
   updateDisplay();
 };
 
