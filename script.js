@@ -26,7 +26,7 @@ function operate(number1, operator, number2) {
   }
 }
 
-let displayValue = 42069;
+let displayValue = "42069";
 let number1 = 2;
 let number2 = 2;
 let operator = "+";
@@ -49,12 +49,22 @@ console.log(test);
 // setting display-div to the value contained in the script
 function updateDisplay() {
   const display = document.querySelector(".display");
-  display.textContent = displayValue;
+  // TODO: Do something smarter to prevent div from disappearing
+  if (displayValue == "") {
+    display.textContent = "Press some numbers dawg";
+  } else {
+    display.textContent = displayValue;
+  }
 }
 updateDisplay();
 
 const button1 = document.querySelector("#number1");
 button1.onclick = () => {
-  displayValue = 1;
+  displayValue += 1;
+  updateDisplay();
+};
+const clearButton = document.querySelector("#clear");
+clearButton.onclick = () => {
+  displayValue = "";
   updateDisplay();
 };
