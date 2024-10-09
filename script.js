@@ -11,7 +11,6 @@ function divide(number1, number2) {
   return number1 / number2;
 }
 
-// TODO: refactor to take a string, split on operator, compute and return as string
 function operate(number1, operator, number2) {
   if (operator == "+") {
     return add(number1, number2);
@@ -135,6 +134,7 @@ divideButton.onclick = () => {
 // equals button
 const equalButton = document.querySelector("#equals");
 equalButton.onclick = () => {
+  // TODO: create functions for string/number conversion
   let stringToBeCalculated = displayValue;
   let operator = "";
   if (stringToBeCalculated.search("[\\+]") != -1) {
@@ -156,6 +156,7 @@ equalButton.onclick = () => {
     stringToBeCalculated.slice(operatorPos + 1, stringToBeCalculated.length),
   );
 
+  // TODO: round off number before displaying (2 decimals)
   displayValue = String(operate(number1, operator, number2));
   updateDisplay();
 };
