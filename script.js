@@ -111,22 +111,22 @@ button0.onclick = () => {
 };
 
 // Operator buttons
-const plusButton = document.querySelector("#operatorPlus");
+const plusButton = document.querySelector("#operator-plus");
 plusButton.onclick = () => {
   displayValue += "+";
   updateDisplay();
 };
-const minusButton = document.querySelector("#operatorMinus");
+const minusButton = document.querySelector("#operator-minus");
 minusButton.onclick = () => {
   displayValue += "-";
   updateDisplay();
 };
-const multiplyButton = document.querySelector("#operatorMultiply");
+const multiplyButton = document.querySelector("#operator-multiply");
 multiplyButton.onclick = () => {
   displayValue += "*";
   updateDisplay();
 };
-const divideButton = document.querySelector("#operatorDivide");
+const divideButton = document.querySelector("#operator-divide");
 divideButton.onclick = () => {
   displayValue += "/";
   updateDisplay();
