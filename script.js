@@ -135,9 +135,7 @@ divideButton.onclick = () => {
 // equals button
 const equalButton = document.querySelector("#equals");
 equalButton.onclick = () => {
-  // TODO: split string into number1, operator, number2, pass into function
   let stringToBeCalculated = displayValue;
-  // TODO: get operator from the string
   let operator = "";
   if (stringToBeCalculated.search("[\\+]") != -1) {
     operator = "+";
@@ -159,10 +157,6 @@ equalButton.onclick = () => {
   );
 
   displayValue = String(operate(number1, operator, number2));
-  console.log(operatorPos);
-  console.log(number1);
-  console.log(number2);
-  console.log(operate(number1, operator, number2));
   updateDisplay();
 };
 
