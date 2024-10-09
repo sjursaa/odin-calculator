@@ -27,7 +27,7 @@ function operate(number1, operator, number2) {
   }
 }
 
-let displayValue = "42069";
+let displayValue = "420+69";
 
 // TODO: Remove this stuff
 // let number1 = 2;
@@ -135,8 +135,20 @@ divideButton.onclick = () => {
 // equals button
 const equalButton = document.querySelector("#equals");
 equalButton.onclick = () => {
+  // TODO: split string into number1, operator, number2, pass into function
   let stringToBeCalculated = displayValue;
-  displayValue = operate(stringToBeCalculated);
+  // TODO: get operator from the string
+  let operator = "+";
+  let operatorPos = 3;
+  let number1 = Number(stringToBeCalculated.slice(0, operatorPos));
+  let number2 = Number(
+    stringToBeCalculated.slice(operatorPos + 1, stringToBeCalculated.length),
+  );
+
+  displayValue = String(operate(number1, operator, number2));
+  console.log(number1);
+  console.log(number2);
+  console.log(operate(number1, operator, number2));
   updateDisplay();
 };
 
