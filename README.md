@@ -13,6 +13,9 @@ operate function should take one operator and two numbers as arguments
 - TODO: add a change to style.css to check that it loads properly
 - TODO: setup flexbox layout to create a grid for the buttons. CSS
 - TODO: implement string to (number operator number) conversion (either in equals eventhandler, operator function or separate function)
+- TODO: implement snarky error message for divide by 0
+- TODO: disable = button for when string lacks all 3 params
+- TODO: call = button function when a second operator is added to the string.
 
 # Extra credit:
 
