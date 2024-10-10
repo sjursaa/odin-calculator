@@ -156,8 +156,8 @@ equalButton.onclick = () => {
     stringToBeCalculated.slice(operatorPos + 1, stringToBeCalculated.length),
   );
 
-  // TODO: round off number before displaying (2 decimals)
-  displayValue = String(operate(number1, operator, number2));
+  //TODO: move toFixed() to the operate function, add logic to only round floats
+  displayValue = String(operate(number1, operator, number2).toFixed(2));
   updateDisplay();
 };
 
