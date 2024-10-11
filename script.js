@@ -139,7 +139,14 @@ button0.onclick = () => {
 // Operator buttons
 const plusButton = document.querySelector("#operator-plus");
 plusButton.onclick = () => {
-  // TODO: if second operator in display call equals()
+  if (
+    displayValue.includes("+") ||
+    displayValue.includes("-") ||
+    displayValue.includes("/") ||
+    displayValue.includes("*")
+  ) {
+    equals();
+  }
   displayValue += "+";
   updateDisplay();
 };
@@ -163,31 +170,6 @@ divideButton.onclick = () => {
 const equalButton = document.querySelector("#equals");
 equalButton.onclick = () => {
   equals();
-  // // TODO: move all this code into its own function called equals()
-  // let stringToBeCalculated = displayValue;
-  // let operator = "";
-  // if (stringToBeCalculated.search("[\\+]") != -1) {
-  //   operator = "+";
-  // }
-  // if (stringToBeCalculated.search("[\\-]") != -1) {
-  //   operator = "-";
-  // }
-  // if (stringToBeCalculated.search("[\\/]") != -1) {
-  //   operator = "/";
-  // }
-  // if (stringToBeCalculated.search("[\\*]") != -1) {
-  //   operator = "*";
-  // }
-  //
-  // let operatorPos = stringToBeCalculated.indexOf(operator);
-  // let number1 = Number(stringToBeCalculated.slice(0, operatorPos));
-  // let number2 = Number(
-  //   stringToBeCalculated.slice(operatorPos + 1, stringToBeCalculated.length),
-  // );
-  //
-  // //TODO: move toFixed() to the operate function, add logic to only round floats
-  // displayValue = String(operate(number1, operator, number2).toFixed(2));
-  // updateDisplay();
 };
 
 // clear button
