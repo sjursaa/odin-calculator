@@ -8,7 +8,11 @@ function multiply(number1, number2) {
   return number1 * number2;
 }
 function divide(number1, number2) {
-  return number1 / number2;
+  let sum = number1 / number2;
+  if (sum % 1 !== 0) {
+    return sum.toFixed(2);
+  }
+  return sum;
 }
 
 function operate(number1, operator, number2) {
@@ -78,8 +82,7 @@ function equals() {
     stringToBeCalculated.slice(operatorPos + 1, stringToBeCalculated.length),
   );
 
-  //TODO: move toFixed() to the operate function, add logic to only round floats
-  displayValue = String(operate(number1, operator, number2).toFixed(2));
+  displayValue = String(operate(number1, operator, number2));
   updateDisplay();
 }
 updateDisplay();
