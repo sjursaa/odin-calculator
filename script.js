@@ -152,16 +152,40 @@ plusButton.onclick = () => {
 };
 const minusButton = document.querySelector("#operator-minus");
 minusButton.onclick = () => {
+  if (
+    displayValue.includes("+") ||
+    displayValue.includes("-") ||
+    displayValue.includes("/") ||
+    displayValue.includes("*")
+  ) {
+    equals();
+  }
   displayValue += "-";
   updateDisplay();
 };
 const multiplyButton = document.querySelector("#operator-multiply");
 multiplyButton.onclick = () => {
+  if (
+    displayValue.includes("+") ||
+    displayValue.includes("-") ||
+    displayValue.includes("/") ||
+    displayValue.includes("*")
+  ) {
+    equals();
+  }
   displayValue += "*";
   updateDisplay();
 };
 const divideButton = document.querySelector("#operator-divide");
 divideButton.onclick = () => {
+  if (
+    displayValue.includes("+") ||
+    displayValue.includes("-") ||
+    displayValue.includes("/") ||
+    displayValue.includes("*")
+  ) {
+    equals();
+  }
   displayValue += "/";
   updateDisplay();
 };
