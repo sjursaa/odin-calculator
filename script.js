@@ -75,6 +75,7 @@ function equals() {
   if (stringToBeCalculated.search("[\\*]") != -1) {
     operator = "*";
   }
+  // TODO: add snarky error message for when displayValue contains /0 (MANDATORY)
 
   let operatorPos = stringToBeCalculated.indexOf(operator);
   let number1 = Number(stringToBeCalculated.slice(0, operatorPos));
@@ -196,6 +197,7 @@ divideButton.onclick = () => {
 // equals button
 const equalButton = document.querySelector("#equals");
 equalButton.onclick = () => {
+  // TODO: check if string contains two valid numbers and an operator before calling function (MANDATORY)
   equals();
 };
 
