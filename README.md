@@ -10,11 +10,6 @@ basic operators: add, subtract, divide, multiply
 
 operate function should take one operator and two numbers as arguments
 
-# Remaining basic requirements:
-
-- TODO: implement snarky error message for divide by 0
-- TODO: disable = button for when string lacks all 3 params
-
 # Extra credit:
 
 - TODO: add support for Floating numbers as input (add . button)
