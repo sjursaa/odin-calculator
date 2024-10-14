@@ -75,15 +75,18 @@ function equals() {
   if (stringToBeCalculated.search("[\\*]") != -1) {
     operator = "*";
   }
-  // TODO: add snarky error message for when displayValue contains /0 (MANDATORY)
 
   let operatorPos = stringToBeCalculated.indexOf(operator);
   let number1 = Number(stringToBeCalculated.slice(0, operatorPos));
   let number2 = Number(
     stringToBeCalculated.slice(operatorPos + 1, stringToBeCalculated.length),
   );
+  if (operator == "/" && number2 == 0) {
+    displayValue = "Don't divide by 0 ya dingus";
+  } else {
+    displayValue = String(operate(number1, operator, number2));
+  }
 
-  displayValue = String(operate(number1, operator, number2));
   updateDisplay();
 }
 updateDisplay();
