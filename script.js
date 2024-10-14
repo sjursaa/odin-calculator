@@ -197,8 +197,14 @@ divideButton.onclick = () => {
 // equals button
 const equalButton = document.querySelector("#equals");
 equalButton.onclick = () => {
-  // TODO: check if string contains two valid numbers and an operator before calling function (MANDATORY)
-  equals();
+  if (
+    displayValue.includes("+") ||
+    displayValue.includes("-") ||
+    displayValue.includes("/") ||
+    displayValue.includes("*")
+  ) {
+    equals();
+  }
 };
 
 // clear button
@@ -207,3 +213,11 @@ clearButton.onclick = () => {
   displayValue = "";
   updateDisplay();
 };
+
+/*
+const backspaceButton = document.querySelector("#backspace");
+backspaceButton.onclick = () => {
+  displayValue -= "";
+  updateDisplay();
+};
+*/
